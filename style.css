@@ -15,7 +15,7 @@ h1{
     color: #538392;
     font-size: 3em;
     font-weight: 900;
-    padding-top:25px;
+    padding-top:20px;
 }
 
 html {
@@ -27,7 +27,7 @@ html {
 }
 
 #tablero{
-    margin: 25px auto 0 auto;
+    margin: 20px auto 0 auto;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     width:332px;
@@ -38,13 +38,13 @@ html {
 #puntuaciones{
     display: flex;
     margin: auto;
-    padding-top:25px;
+    padding-top:20px;
     justify-content: space-between;
     max-width: 332px;
 }
 
 #puntos1, #puntos2{
-    font-size: 4em;
+    font-size: 51px;
     line-height: 1em;
 }
 #jugador1, #jugador2{
@@ -72,11 +72,11 @@ html {
     color:#6B8A7A;
     border-radius:15px;
     text-align: center;
-    line-height: 80px;
+    line-height: 60px;
     font-size: 1.75em;
     width: 332px;
-    height: 80px;
-    margin:25px auto 0 auto;
+    height: 60px;
+    margin:20px auto 0 auto;
 }
 
 .casilla{
@@ -130,10 +130,10 @@ html {
     color: #55555550;
     cursor:not-allowed;
     width: 332px;
-    height: 80px;
+    height: 60px;
     font-family: "Nunito";
     border-radius: 15px;
-    margin: 25px auto 0 auto;
+    margin: 20px auto 0 auto;
     font-weight: 800;
     font-size: 1.5em;
     border: 0;

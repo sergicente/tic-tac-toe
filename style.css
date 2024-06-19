@@ -19,11 +19,11 @@ h1{
 }
 
 html {
-    touch-action: manipulation; /* Desactiva el comportamiento predeterminado del navegador para pellizcar para hacer zoom */
-    overflow: hidden; /* Evita que el contenido se desplace al hacer zoom */
-    position: fixed; /* Mantiene la página en su lugar sin desplazamiento */
-    width: 100%; /* Asegura que el ancho de la página se mantenga */
-    height: 100%; /* Asegura que la altura de la página se mantenga */
+    touch-action: manipulation; 
+    overflow: hidden; 
+    position: fixed;
+    width: 100%; 
+    height: 100%;
 }
 
 #tablero{
@@ -39,17 +39,18 @@ html {
     display: flex;
     margin: auto;
     padding-top:20px;
-    justify-content: space-between;
+    justify-content:space-between;
     max-width: 332px;
 }
 
 #puntos1, #puntos2{
-    font-size: 51px;
+    font-size: 40px;
     line-height: 1em;
 }
 #jugador1, #jugador2{
     text-align: center;
-    padding:20px 20px 20px 20px;
+    width:calc( 50% - 10px);
+    height:80px;
     font-family: "Nunito";
     border-radius: 15px;
     font-weight: 800;
@@ -77,6 +78,13 @@ html {
     width: 332px;
     height: 60px;
     margin:20px auto 0 auto;
+}
+
+.player{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .casilla{
@@ -145,3 +153,4 @@ html {
     color: #fff;
     cursor:pointer;
 }
+

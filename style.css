@@ -126,10 +126,11 @@ html {
 }
 
 .restart{
-    width: 332px;
-    height: 80px;
     background-color: #dddddd50;
     color: #55555550;
+    cursor:not-allowed;
+    width: 332px;
+    height: 80px;
     font-family: "Nunito";
     border-radius: 15px;
     margin: 25px auto 0 auto;
@@ -137,7 +138,6 @@ html {
     font-size: 1.5em;
     border: 0;
     display: block;
-    cursor:not-allowed;
 }
 
 .restartOn{

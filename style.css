@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #eee;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Nunito';
+    color: #538392;
+    font-size: 3em;
+    font-weight: 900;
+    padding-top:25px;
+}
+
+html {
+    touch-action: manipulation; /* Desactiva el comportamiento predeterminado del navegador para pellizcar para hacer zoom */
+    overflow: hidden; /* Evita que el contenido se desplace al hacer zoom */
+    position: fixed; /* Mantiene la página en su lugar sin desplazamiento */
+    width: 100%; /* Asegura que el ancho de la página se mantenga */
+    height: 100%; /* Asegura que la altura de la página se mantenga */
+}
+
+#tablero{
+    margin: 25px auto 0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:332px;
+}
+
+
+
+#puntuaciones{
+    display: flex;
+    margin: auto;
+    padding-top:25px;
+    justify-content: space-between;
+    max-width: 332px;
+}
+
+#puntos1, #puntos2{
+    font-size: 4em;
+    line-height: 1em;
+}
+#jugador1, #jugador2{
+    text-align: center;
+    padding:20px 20px 20px 20px;
+    font-family: "Nunito";
+    border-radius: 15px;
+    font-weight: 800;
+}
+
+#jugador1{
+    background-color: #18BC9C;
+    color:white;
+}
+
+#jugador2{
+    background-color: salmon;
+    color:white;
+}
+
+#mensajes{
+    background-color: #C8CFA0;
+    font-family: 'Pixelify Sans';
+    font-weight: 100;
+    color:#6B8A7A;
+    border-radius:15px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 1.75em;
+    width: 332px;
+    height: 80px;
+    margin:25px auto 0 auto;
+}
+
+.casilla{
+    width: 100px;
+    height: 100px;
+    border: 8px solid #999;
+    background-color: #eee;
+    font-family: "Nunito";
+    font-weight: 800;
+    font-size: 5em;
+    line-height: 106px;
+    text-align: center;
+    color:#4f1c1c;
+}
+
+.top{
+    border-top: 0;
+}
+
+.bottom{
+    border-bottom: 0;
+}
+
+.left{
+    border-left: 0;
+}
+
+.right{
+    border-right: 0;
+}
+
+.verde{
+    color:#18BC9C;
+}
+
+.rojo{
+    color:salmon;
+}
+
+
+.highlightX {
+    background-color: lightgreen;
+}
+
+.highlightO {
+    background-color: rgb(255, 187, 179);
+}
+
+.restart{
+    width: 332px;
+    height: 80px;
+    background-color: #dddddd50;
+    color: #55555550;
+    font-family: "Nunito";
+    border-radius: 15px;
+    margin: 25px auto 0 auto;
+    font-weight: 800;
+    font-size: 1.5em;
+    border: 0;
+    display: block;
+    cursor:not-allowed;
+}
+
+.restartOn{
+    background-color: #6295A2;
+    color: #fff;
+    cursor:pointer;
+}

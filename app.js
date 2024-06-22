@@ -8,6 +8,7 @@ const mensajes = document.querySelector('#mensajes')
 const combinacionesGanadoras = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]];
 let jugando = true;
 let jugador1 = 0;
+let inicio = true;
 let jugador2 = 0;
 for (let i = 1; i < 10; i++) {
     casilla[i] = document.querySelector(`#tablero .casilla[data-index="${i}"]`);
@@ -21,6 +22,8 @@ let contador = 0;
 for (let i = 1; i < 10; i++) {
     casilla[i].addEventListener('click', () => {
         if(contador%2==0 && casilla[i].textContent =='' && jugando){
+            inicio = false;
+            restart.classList.remove('restartOn');
             casilla[i].classList.remove('rojo');
             casilla[i].classList.add('verde');
             casilla[i].textContent = 'X';
@@ -28,6 +31,7 @@ for (let i = 1; i < 10; i++) {
             ++contador;    
             verificarTresEnRaya();
         }else if(contador%2!==0 && casilla[i].textContent =='' && jugando){
+            restart.classList.remove('restartOn');
             casilla[i].classList.remove('remove');
             casilla[i].classList.add('rojo');
             casilla[i].textContent = 'O';
@@ -47,16 +51,19 @@ restart.addEventListener('click', reiniciar);
 
 // Funciones
 function reiniciar(){
-    for (let i = 1; i < 10; i++) {
-        casilla[i].textContent = '';
-        casilla[i].classList.remove('highlightO');
-        casilla[i].classList.remove('highlightX');
+    if(!jugando || inicio){
+        for (let i = 1; i < 10; i++) {
+            casilla[i].textContent = '';
+            casilla[i].classList.remove('highlightO');
+            casilla[i].classList.remove('highlightX');
+    
+        };
+        contador = 0;
+        jugando = true;
+        mensajes.textContent = 'Turno del jugador 1'
+        restart.classList.remove('restartOn');
+    }
 
-    };
-    contador = 0;
-    jugando = true;
-    mensajes.textContent = 'Turno del jugador 1'
-    restart.classList.remove('restartOn');
 }
 
 

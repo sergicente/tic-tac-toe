@@ -51,7 +51,7 @@ restart.addEventListener('click', reiniciar);
 
 // Funciones
 function reiniciar(){
-    if(!jugando || inicio){
+    if(!jugando || inicio || contador==9){
         for (let i = 1; i < 10; i++) {
             casilla[i].textContent = '';
             casilla[i].classList.remove('highlightO');
